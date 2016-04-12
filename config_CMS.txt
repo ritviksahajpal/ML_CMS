@@ -1,0 +1,20 @@
+[PROJECT]
+project_name = CMS                                ; Name of project directory (to be created within out_dir)
+TAG = CMS                                         ; A log file is created as Log_<TAG>.txt
+fixed_vars = ['PLOT', 'INVYR_2ndCycle', 'CRM_Live_Biomass_2ndCycle', 'Province', 'Province_id', 'name', 'STATEFP',	'COUNTYFP',	'Lat_round', 'Long_round', 'State_Code', 'UID']
+name_inp_fl = FIA_Filtered09999_nolatLongRS.csv
+
+[PATHS]
+win_prjdir = C:\\Users\\ritvik\\Documents\\PhD\\Projects\\CMS\\
+mac_prjdir = /Users/ritvik/Documents/Projects/CMS/
+base_dir = Input/  ;Directory of CMS inputs
+out_dir = Output/ ;Directory of CMS outputs
+
+[FORECAST]
+DO_CLASSIFICATION = False
+FILL_ROWS_W_MEDIAN = False
+model_pickle = pickled_model
+plot_model_importance = False
+compute_wtd_stats = False
+USE_CSV_ON_DISK = True ; Should we use the combined csv that was created in a previous run?
+ML_TARGETS = Jenkins_Live_Biomass_2ndCycle ; Variables used as targets
